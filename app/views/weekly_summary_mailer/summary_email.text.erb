@@ -1,0 +1,8 @@
+Your Weekly Summary
+
+<% @summary_content.each do |group_name, posts| %>
+  <%= group_name %>
+  <% posts.each do |post| %>
+    - <%= post.content %> (<%= post.likes_count %> likes)
+  <% end %>
+<% end %>

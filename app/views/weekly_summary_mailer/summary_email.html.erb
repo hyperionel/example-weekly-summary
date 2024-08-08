@@ -1,0 +1,10 @@
+<h1>Your Weekly Summary</h1>
+
+<% @summary_content.each do |group_name, posts| %>
+  <h2><%= group_name %></h2>
+  <ul>
+    <% posts.each do |post| %>
+      <li><%= post.content %> - <%= post.likes_count %> likes</li>
+    <% end %>
+  </ul>
+<% end %>
